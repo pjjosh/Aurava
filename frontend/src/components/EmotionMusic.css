@@ -1,0 +1,172 @@
+/* --------------------------
+   frontend/src/components/EmotionMusic.css
+   -------------------------- */
+
+/* 1) Import a nice system‑style font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* frontend/src/components/EmotionMusic.css */
+
+.emm-app {
+  position: relative;    /* allow absolutely‑positioned notes inside */
+  overflow: hidden;       /* trim any overflow */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  padding: 1rem;
+}
+
+
+.emm-card {
+  background: rgba(255, 255, 255, 0.98);
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.emm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.emm-title {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.emm-error {
+  color: #e53e3e;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Video container with border + rounded corners */
+.emm-video-container {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto 1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.emm-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating detect button */
+.emm-detect-btn {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3f51b5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+.emm-detect-btn:hover:not(:disabled) {
+  background: #303f9f;
+}
+
+.emm-detect-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emm-emotion {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Genre selector */
+.emm-genre-label {
+  font-weight: 600;
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+.emm-genre-select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 2.5rem);
+  max-width: 200px;
+}
+
+/* Generate Music button */
+.emm-generate-btn {
+  width: 100%;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.emm-generate-btn:hover:not(:disabled) {
+  background: #388e3c;
+  transform: translateY(-2px);
+}
+
+.emm-generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Audio player styling */
+.emm-audio {
+  margin-top: 1rem;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Debug snapshot styling */
+.emm-snapshot-debug {
+  margin: 1.5rem 0;
+}
+
+.emm-snapshot-debug img {
+  border: 2px solid #666;
+  border-radius: 4px;
+  max-width: 100%;
+}
