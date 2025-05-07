@@ -1,0 +1,10 @@
+/backend/__pycache__/
+/backend/*.pyc
+/backend/*.pyo
+/backend/*.pyd
+/backend/env/
+/backend/src/__pycache__/
+/backend/src/data/
+/backend/src/test/
+/backend/src/train/
+/frontend/node_modules/
